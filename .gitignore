@@ -1,0 +1,14 @@
+
+\.vscode/tasks\.json
+
+\.vscode/
+
+build/
+
+MDK-ARM/STCubeGenerated/
+
+results\.txt
+
+STM32F429\.svd
+
+STM32F429ZITx_FLASH\.ld
