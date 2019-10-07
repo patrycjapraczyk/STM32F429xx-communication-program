@@ -1,9 +1,7 @@
 #include "user_code.h"
 #include "main.h"
 #include "fsdata_custom.h"
-
 #define adcBufferLen 512
-
 unsigned int timFlag;
 extern ADC_HandleTypeDef hadc1;
 unsigned int tcpStream;
@@ -205,16 +203,23 @@ err_t dispatchData(void) {
 
 void tcpAcq_init(void) {
 	
-  // TCP Protocol Control Block
-	struct tcp_pcb *pcb;
-	err_t err;
+  struct tcp_pcb *pcb;
+  err_t err;
 
 	tcpStream = 0;
-	pcb = tcp_new();
+	tcpAcq_initDataStr(0);
+ 
+  pcb = tcp_new_ip_type(IPADDR_TYPE_V4);
+  tcp_setprio(pcb, TCP_PRIO_NORMAL);
+  err = tcp_bind(pcb, IP4_ADDR_ANY, 7771);
+  pcb = tcp_listen(pcb);
+  tcp_accept(pcb, tcpAcq_accept);
+
+  	/* pcb = tcp_new();
 	ip_addr_t host_addr, client_adddr;
 	IP4_ADDR(&host_addr, 192, 168, 1, 1);
 	err = tcp_bind(pcb, IP4_ADDR_ANY, 7771); //bind socket IP and port address
-	err = tcp_connect(pcb, &host_addr, 7772, tcpAcq_accept);
+	err = tcp_connect(pcb, &host_addr, 7772, tcpAcq_accept);*/
 }
 
 err_t tcpAcq_accept(void *arg, struct tcp_pcb *pcb, err_t err) {
