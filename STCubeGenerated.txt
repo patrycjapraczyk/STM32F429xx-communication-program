@@ -1,0 +1,88 @@
+Configuration	STCubeGenerated
+STM32CubeMX 	5.1.0
+Date	03/28/2019
+MCU	STM32F429ZITx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+ETH	RMII	ETH_CRS_DV	PA7
+ETH	RMII	ETH_MDC	PC1
+ETH	RMII	ETH_MDIO	PA2
+ETH	RMII	ETH_REF_CLK	PA1
+ETH	RMII	ETH_RXD0	PC4
+ETH	RMII	ETH_RXD1	PC5
+ETH	RMII	ETH_TXD0	PB12
+ETH	RMII	ETH_TXD1	PB13
+ETH	RMII	ETH_TX_EN	PB11
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+27	PC1	ETH_MDC	
+35	PA1	ETH_REF_CLK	
+36	PA2	ETH_MDIO	
+43	PA7	ETH_CRS_DV	
+44	PC4	ETH_RXD0	
+45	PC5	ETH_RXD1	
+46	PB0	GPIO_Output	
+70	PB11	ETH_TX_EN	
+73	PB12	ETH_TXD0	
+74	PB13	ETH_TXD1	
+75	PB14	GPIO_Output	
+137	PB7	GPIO_Output	
+PERIPHERALS	MODES	FUNCTIONS	PINS
+ETH	RMII	ETH_CRS_DV	PA7
+ETH	RMII	ETH_MDC	PC1
+ETH	RMII	ETH_MDIO	PA2
+ETH	RMII	ETH_REF_CLK	PA1
+ETH	RMII	ETH_RXD0	PC4
+ETH	RMII	ETH_RXD1	PC5
+ETH	RMII	ETH_TXD0	PB12
+ETH	RMII	ETH_TXD1	PB13
+ETH	RMII	ETH_TX_EN	PB11
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+27	PC1	ETH_MDC	
+35	PA1	ETH_REF_CLK	
+36	PA2	ETH_MDIO	
+43	PA7	ETH_CRS_DV	
+44	PC4	ETH_RXD0	
+45	PC5	ETH_RXD1	
+46	PB0	GPIO_Output	
+70	PB11	ETH_TX_EN	
+73	PB12	ETH_TXD0	
+74	PB13	ETH_TXD1	
+75	PB14	GPIO_Output	
+137	PB7	GPIO_Output	
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : STCubeGenerated
+Project Folder : C:\TPod\cpp\cortex_f429_t1\RTE\Device\STM32F429ZITx\STCubeGenerated
+Toolchain / IDE : MDK-ARM V5
+Firmware Package Name and Version : STM32Cube FW_F4 V1.24.0
+
+
+Code Generation Settings : 
+STM32Cube Firmware Library Package : Copy all used libraries into the project folder
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : No
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : 
+
+
+
+
+
