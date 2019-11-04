@@ -168,6 +168,8 @@ void tcpAcq_init(void)
 	IP4_ADDR(&host_addr, 192, 168, 1, 1);
 	err = tcp_bind(pcb, IP4_ADDR_ANY, 7771); //bind socket IP and port address
 	err = tcp_connect(pcb, &host_addr, 7772, tcpAcq_accept); 
+	int i = 0;
+	i++;
 }
 
 //prepare and send data

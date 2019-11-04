@@ -42,7 +42,7 @@ void userLeds_play(void);
 void switchOnLed(SWITCH_STATUS onOff);
 void setUpDataStruct(void);
 void generateData(void);
-void tcpAcq_Init(void);
+void tcpAcq_init(void);
 err_t tcpAcq_accept(void *arg, struct tcp_pcb *pcb, err_t err);
 err_t tcpAcq_recv(void *arg, struct tcp_pcb *pcb, struct pbuf *data, err_t err);
 void tcpAcq_err(void *arg, err_t err);
